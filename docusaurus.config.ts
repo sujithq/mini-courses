@@ -53,7 +53,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'docs2',
-        path: 'docs2',
+        path: 'tutorials/docs2',
         routeBasePath: 'docs2',
         sidebarPath: './sidebars.ts',
       }
@@ -62,7 +62,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'docs3',
-        path: 'docs3',
+        path: 'tutorials/docs3',
         routeBasePath: 'docs3',
         sidebarPath: './sidebars.ts',
       },
@@ -90,7 +90,7 @@ const config: Config = {
           label: 'Docs3',
           activeBaseRegex: `/docs3/`,
         },
-        {to: 'https://sujithq.github.io', label: 'Blog', position: 'left'},
+        {href: 'https://sujithq.github.io', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/sujitha/mini-courses',
           label: 'GitHub',
@@ -128,7 +128,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: 'https://sujithq.github.io',
+              href: 'https://sujithq.github.io',
             },
             {
               label: 'GitHub',

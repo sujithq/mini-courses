@@ -40,35 +40,34 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        docs: false,
+        blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom2.css',
         },
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs2',
+        path: 'docs2',
+        routeBasePath: 'docs2',
+        sidebarPath: './sidebars.ts',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs3',
+        path: 'docs3',
+        routeBasePath: 'docs3',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -80,14 +79,20 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/docs2/intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs2',
+          activeBaseRegex: `/docs2/`,
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: '/docs3/intro',
+          position: 'left',
+          label: 'Docs3',
+          activeBaseRegex: `/docs3/`,
+        },
+        {to: 'https://sujithq.github.io', label: 'Blog', position: 'left'},
+        {
+          href: 'https://github.com/sujitha/mini-courses',
           label: 'GitHub',
           position: 'right',
         },
@@ -100,8 +105,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Docs2 Intro',
+              to: '/docs2/intro',
+            },
+            {
+              label: 'Docs3 Intro',
+              to: '/docs3/intro',
             },
           ],
         },
@@ -109,16 +118,8 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/SujithQ',
             },
           ],
         },
@@ -127,16 +128,16 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: 'https://sujithq.github.io',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/sujithq/mini-courses',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mini Courses, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

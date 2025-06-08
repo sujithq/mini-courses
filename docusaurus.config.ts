@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Mini Courses',
+  tagline: 'Learn by doing',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://sujithq.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/mini-courses/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'sujithq', // Usually your GitHub org/user name.
+  projectName: 'mini-courses', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -52,18 +52,36 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'docs2',
-        path: 'tutorials/docs2',
-        routeBasePath: 'docs2',
+        id: 'azure-course1',
+        path: 'tutorials/azure/course1',
+        routeBasePath: 'azure/course1',
         sidebarPath: './sidebars.ts',
       }
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'docs3',
-        path: 'tutorials/docs3',
-        routeBasePath: 'docs3',
+        id: 'azure-course2',
+        path: 'tutorials/azure/course2',
+        routeBasePath: 'azure/course2',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'github-course1',
+        path: 'tutorials/github/course1',
+        routeBasePath: 'github/course1',
+        sidebarPath: './sidebars.ts',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'github-course2',
+        path: 'tutorials/github/course2',
+        routeBasePath: 'github/course2',
         sidebarPath: './sidebars.ts',
       },
     ],
@@ -79,16 +97,16 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs2/intro',
+          to: '/azure',
           position: 'left',
-          label: 'Docs2',
-          activeBaseRegex: `/docs2/`,
+          label: 'Azure',
+          activeBaseRegex: `/azure/`,
         },
         {
-          to: '/docs3/intro',
+          to: '/github',
           position: 'left',
-          label: 'Docs3',
-          activeBaseRegex: `/docs3/`,
+          label: 'GitHub',
+          activeBaseRegex: `/github/`,
         },
         {href: 'https://sujithq.github.io', label: 'Blog', position: 'left'},
         {
@@ -98,19 +116,24 @@ const config: Config = {
         },
       ],
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
+    },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Areas',
           items: [
             {
-              label: 'Docs2 Intro',
-              to: '/docs2/intro',
+              label: 'Azure Intro',
+              to: '/azure',
             },
             {
-              label: 'Docs3 Intro',
-              to: '/docs3/intro',
+              label: 'GitHub Intro',
+              to: '/github',
             },
           ],
         },
@@ -137,7 +160,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Mini Courses, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Sujith Quintelier. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

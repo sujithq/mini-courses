@@ -33,7 +33,7 @@ export default function LandingpageFeatures({ images, keywords, area, buttons }:
           </div>
           <div className="row">
             <div className={`${styles.subtitle}`}>
-              Grab-and-go resources to help you learn new skills but also <a href="./contributing">contribute</a> your own workshop to help others in their AKS learning journey.
+              Grab-and-go resources to help you learn new skills.
             </div>
           </div>
           <div className='row'>

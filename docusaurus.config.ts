@@ -90,9 +90,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Mini Courses',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Mini Courses Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -110,7 +110,7 @@ const config: Config = {
         },
         {href: 'https://sujithq.github.io', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/sujitha/mini-courses',
+          href: 'https://github.com/sujithq/mini-courses',
           label: 'GitHub',
           position: 'right',
         },

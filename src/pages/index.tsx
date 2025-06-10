@@ -11,6 +11,10 @@ import styles from './index.module.css';
 const imageUrls = [
   './img/azure/img.png',
   './img/github/img.png',
+  './img/devops/img.png',
+  './img/terraform/img.png',
+  './img/.net/img.png',
+  './img/platform_engineering/img.png',
 ];
 const keywords = [
     'Azure',

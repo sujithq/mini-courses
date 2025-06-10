@@ -128,11 +128,11 @@ const config: Config = {
           title: 'Areas',
           items: [
             {
-              label: 'Azure Intro',
+              label: 'Azure',
               to: '/azure',
             },
             {
-              label: 'GitHub Intro',
+              label: 'GitHub',
               to: '/github',
             },
           ],
